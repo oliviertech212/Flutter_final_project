@@ -31,7 +31,7 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                   ),
                   Text('Me',
                       style: TextStyle(
-                          color: Colors.black,
+                          color: Color.fromARGB(255, 11, 11, 30),
                           fontSize: 30,
                           fontWeight: FontWeight.bold)),
                 ],
@@ -55,7 +55,7 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                         children: [
                           Text("Your Name",
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Color.fromARGB(255, 11, 11, 30),
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold))
                         ],
@@ -70,7 +70,7 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
-                          prefixIcon: Icon(Icons.person),
+                          prefixIcon: Icon(Icons.person, color: Colors.white),
                         ),
                       ),
                       const SizedBox(height: 5),
@@ -79,7 +79,7 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                         children: [
                           Text("Email Address",
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Color.fromARGB(255, 11, 11, 30),
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold))
                         ],
@@ -94,7 +94,7 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
-                          prefixIcon: Icon(Icons.email),
+                          prefixIcon: Icon(Icons.email, color: Colors.white),
                         ),
                       ),
                       const SizedBox(height: 5),
@@ -103,7 +103,7 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                         children: [
                           Text("Phone Number",
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Color.fromARGB(255, 11, 11, 30),
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold))
                         ],
@@ -118,7 +118,7 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
-                          prefixIcon: Icon(Icons.person),
+                          prefixIcon: Icon(Icons.person, color: Colors.white),
                         ),
                       ),
                       const SizedBox(height: 5),
@@ -127,7 +127,7 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                         children: [
                           Text("password",
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Color.fromARGB(255, 11, 11, 30),
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold))
                         ],
@@ -135,7 +135,11 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                       TextField(
                         decoration: InputDecoration(
                             hintText: ' password',
-                            prefixIcon: Icon(Icons.lock)),
+                            hintStyle: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            prefixIcon: Icon(Icons.lock, color: Colors.white)),
                         obscureText: true,
                         style: const TextStyle(
                           color: Colors.white,
@@ -151,7 +155,7 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                         children: [
                           Text("confirm password",
                               style: TextStyle(
-                                  color: Colors.black,
+                                  color: Color.fromARGB(255, 11, 11, 30),
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold))
                         ],
@@ -159,7 +163,11 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                       TextField(
                         decoration: InputDecoration(
                             hintText: 'confirm password',
-                            prefixIcon: Icon(Icons.lock)),
+                            hintStyle: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            prefixIcon: Icon(Icons.lock, color: Colors.white)),
                         obscureText: true,
                         style: const TextStyle(
                           color: Colors.white,
@@ -172,6 +180,7 @@ class _MyRegisterPageState extends State<MyRegisterPage> {
                       SizedBox(height: 12),
                       Container(
                         width: double.infinity,
+                        height: 100,
                         padding: EdgeInsets.fromLTRB(
                           0,
                           20,
