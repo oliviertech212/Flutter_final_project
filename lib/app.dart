@@ -57,7 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.white,
                   width: double.infinity,
                   height: 250,
-                  child: Row(children: [])),
+                  child: Row(children: [
+                    Image.asset('assets/images/topimage.png'),
+                    Image.asset('assets/images/bottom.png')
+                  ])),
               SizedBox(height: 40),
               Container(
                 width: double.infinity,
