@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyLoginPage extends StatefulWidget {
   const MyLoginPage({super.key});
@@ -116,8 +117,50 @@ class _MyLoginPageState extends State<MyLoginPage> {
                         // indent: 20,
                         // endIndent: 20,
                       ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+// ...
+
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              FontAwesomeIcons.github, // Use the GitHub icon
+                              color: Colors.blue,
+                              size: 40,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              FontAwesomeIcons.twitter, // Use the GitHub icon
+                              color: Colors.blue,
+                              size: 40,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              FontAwesomeIcons.google, // Use the GitHub icon
+                              color: Colors.red,
+                              size: 40,
+                            ),
+                          ),
+                        ],
+                      )
                     ]),
                   )),
+              SizedBox(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(" Not yet a  member? "),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text("Sign Up"),
+                  )
+                ],
+              )
             ]),
           ),
         ));
