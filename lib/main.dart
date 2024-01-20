@@ -1,4 +1,5 @@
 import 'package:finalproject/page/loginpage.dart';
+import 'package:finalproject/page/registerpage.dart';
 import 'package:flutter/material.dart';
 import 'app.dart';
 
@@ -12,5 +13,6 @@ void main() {
       routes: {
         '/': (context) => const MyHomePage(),
         "/login": (context) => const MyLoginPage(),
+        '/register': (context) => const MyRegisterPage(),
       }));
 }

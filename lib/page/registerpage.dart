@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class MyLoginPage extends StatefulWidget {
-  const MyLoginPage({super.key});
+class MyRegisterPage extends StatefulWidget {
+  const MyRegisterPage({super.key});
 
   @override
-  State<MyLoginPage> createState() => _MyLoginPageState();
+  State<MyRegisterPage> createState() => _MyRegisterPageState();
 }
 
-class _MyLoginPageState extends State<MyLoginPage> {
+class _MyRegisterPageState extends State<MyRegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,29 +38,22 @@ class _MyLoginPageState extends State<MyLoginPage> {
               ),
               SizedBox(height: 40),
               Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      color: Colors.black,
-                      width: 1.0,
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                  ),
+
                   // color: Colors.white,
                   width: double.infinity,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(children: [
-                      Text("Login",
+                      Text("Create Account",
                           style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 30,
+                              color: Colors.white,
+                              fontSize: 25,
                               fontWeight: FontWeight.bold)),
                       SizedBox(height: 5),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text("username",
+                          Text("Your Name",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 20,
@@ -69,12 +62,60 @@ class _MyLoginPageState extends State<MyLoginPage> {
                       ),
                       TextField(
                         style: const TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                         ),
                         decoration: InputDecoration(
-                          hintText: 'Enter your email address',
+                          hintText: 'your full name',
                           hintStyle: TextStyle(
-                            color: Colors.grey,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          prefixIcon: Icon(Icons.person),
+                        ),
+                      ),
+                      const SizedBox(height: 5),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text("Email Address",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold))
+                        ],
+                      ),
+                      TextField(
+                        style: const TextStyle(
+                          color: Colors.white,
+                        ),
+                        decoration: InputDecoration(
+                          hintText: 'Email Address',
+                          hintStyle: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          prefixIcon: Icon(Icons.email),
+                        ),
+                      ),
+                      const SizedBox(height: 5),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text("Phone Number",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold))
+                        ],
+                      ),
+                      TextField(
+                        style: const TextStyle(
+                          color: Colors.white,
+                        ),
+                        decoration: InputDecoration(
+                          hintText: 'phone number',
+                          hintStyle: TextStyle(
+                            color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
                           prefixIcon: Icon(Icons.person),
@@ -93,19 +134,40 @@ class _MyLoginPageState extends State<MyLoginPage> {
                       ),
                       TextField(
                         decoration: InputDecoration(
-                            hintText: 'Enter your password',
+                            hintText: ' password',
                             prefixIcon: Icon(Icons.lock)),
                         obscureText: true,
                         style: const TextStyle(
-                          color: Colors.grey,
+                          color: Colors.white,
                           fontWeight: FontWeight.bold,
                         ),
-
                         obscuringCharacter: "*",
                         autocorrect: false,
                         enableSuggestions: false,
-
-                        // maxLength: 8,
+                      ),
+                      SizedBox(height: 5),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text("confirm password",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold))
+                        ],
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                            hintText: 'confirm password',
+                            prefixIcon: Icon(Icons.lock)),
+                        obscureText: true,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        obscuringCharacter: "*",
+                        autocorrect: false,
+                        enableSuggestions: false,
                       ),
                       SizedBox(height: 12),
                       Container(
@@ -119,7 +181,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                         child: ElevatedButton(
                             onPressed: () {},
                             child: const Text(
-                              'Login',
+                              'Next',
                               style: TextStyle(
                                 fontSize: 24,
                                 color: Colors.white,
@@ -128,56 +190,12 @@ class _MyLoginPageState extends State<MyLoginPage> {
                             ),
                             style: ElevatedButton.styleFrom(
                               elevation: 8,
-                              backgroundColor: Color(0xFFDA5E48),
+                              backgroundColor: Color.fromARGB(255, 11, 11, 30),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5),
                               ),
                             )),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [Text("Forgot Your Password?")],
-                      ),
-                      SizedBox(height: 8),
-                      Divider(
-                        color: Colors.black,
-                        height: 50,
-                        thickness: 2,
-                        // indent: 20,
-                        // endIndent: 20,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        // crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-// ...
-
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              FontAwesomeIcons.github, // Use the GitHub icon
-                              color: Colors.blue,
-                              size: 40,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              FontAwesomeIcons.twitter, // Use the GitHub icon
-                              color: Colors.blue,
-                              size: 40,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              FontAwesomeIcons.google, // Use the GitHub icon
-                              color: Colors.red,
-                              size: 40,
-                            ),
-                          ),
-                        ],
-                      )
                     ]),
                   )),
               SizedBox(height: 40),
@@ -185,15 +203,15 @@ class _MyLoginPageState extends State<MyLoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    " Not yet a  member? ",
+                    "Already have an account  ",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/register');
+                      Navigator.pushNamed(context, '/login');
                     },
                     child: Text(
-                      "Sign Up",
+                      "Login Here",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   )
