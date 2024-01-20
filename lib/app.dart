@@ -54,13 +54,31 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               SizedBox(height: 40),
               Container(
-                  color: Colors.white,
-                  width: double.infinity,
-                  height: 250,
-                  child: Row(children: [
-                    Image.asset('assets/images/topimage.png'),
-                    Image.asset('assets/images/bottom.png')
-                  ])),
+                // color: Colors.white,
+                width: double.infinity,
+                height: 250,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      top: 0,
+                      right: 0,
+                      child: Image.asset(
+                        'assets/images/topimage.png',
+                        height: MediaQuery.of(context).size.width * 0.5,
+                        width: MediaQuery.of(context).size.width * 0.5,
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      left: 0,
+                      child: Image.asset(
+                        'assets/images/bottom.png',
+                        width: MediaQuery.of(context).size.width * 0.5,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               SizedBox(height: 40),
               Container(
                 width: double.infinity,
