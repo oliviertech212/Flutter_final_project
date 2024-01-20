@@ -56,24 +56,47 @@ class _MyLoginPageState extends State<MyLoginPage> {
                               color: Colors.black,
                               fontSize: 30,
                               fontWeight: FontWeight.bold)),
+                      SizedBox(height: 5),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text("username",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold))
+                        ],
+                      ),
                       TextField(
                         style: const TextStyle(
                           color: Colors.black,
                         ),
                         decoration: InputDecoration(
-                          filled: true,
-                          labelText: 'Email',
+                          hintText: 'Enter your email address',
+                          hintStyle: TextStyle(
+                            color: Colors.grey,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
-                      const SizedBox(height: 12.0),
+                      const SizedBox(height: 5),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text("password",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold))
+                        ],
+                      ),
                       TextField(
-                        decoration: InputDecoration(
-                          filled: true,
-                          labelText: 'Password',
-                        ),
+                        decoration:
+                            InputDecoration(hintText: 'Enter your password'),
                         obscureText: true,
                         style: const TextStyle(
-                          color: Colors.black,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
                         ),
 
                         obscuringCharacter: "*",
@@ -109,6 +132,10 @@ class _MyLoginPageState extends State<MyLoginPage> {
                               ),
                             )),
                       ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [Text("Forgot Your Password?")],
+                      ),
                       SizedBox(height: 8),
                       Divider(
                         color: Colors.black,
@@ -119,6 +146,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
+                        // crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
 // ...
 
@@ -154,10 +182,16 @@ class _MyLoginPageState extends State<MyLoginPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(" Not yet a  member? "),
+                  Text(
+                    " Not yet a  member? ",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   TextButton(
                     onPressed: () {},
-                    child: Text("Sign Up"),
+                    child: Text(
+                      "Sign Up",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                   )
                 ],
               )
