@@ -63,7 +63,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                           Text("username",
                               style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 30,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold))
                         ],
                       ),
@@ -77,6 +77,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                             color: Colors.grey,
                             fontWeight: FontWeight.bold,
                           ),
+                          prefixIcon: Icon(Icons.person),
                         ),
                       ),
                       const SizedBox(height: 5),
@@ -86,13 +87,14 @@ class _MyLoginPageState extends State<MyLoginPage> {
                           Text("password",
                               style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 30,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold))
                         ],
                       ),
                       TextField(
-                        decoration:
-                            InputDecoration(hintText: 'Enter your password'),
+                        decoration: InputDecoration(
+                            hintText: 'Enter your password',
+                            prefixIcon: Icon(Icons.lock)),
                         obscureText: true,
                         style: const TextStyle(
                           color: Colors.grey,
