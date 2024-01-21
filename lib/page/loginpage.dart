@@ -117,7 +117,9 @@ class _MyLoginPageState extends State<MyLoginPage> {
                           20,
                         ),
                         child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/otp');
+                            },
                             child: const Text(
                               'Login',
                               style: TextStyle(
