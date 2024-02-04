@@ -13,82 +13,108 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         backgroundColor: Color(0xFFDA5E48),
         body: Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-            SizedBox(height: 100),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Tech',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold),
-                ),
-                Text('Me',
+          padding: EdgeInsets.all(18.0),
+          child: SingleChildScrollView(
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              SizedBox(height: 100),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Tech',
                     style: TextStyle(
-                        color: Colors.black,
+                        color: Colors.white,
                         fontSize: 30,
-                        fontWeight: FontWeight.bold)),
-              ],
-            ),
-            SizedBox(height: 10),
-            Text(
-              'Accelerating Tech with confidence',
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
-            SizedBox(height: 5),
-            Text(
-              'East Africa’s Biggest ',
-              style: TextStyle(
-                  color: Color.fromRGBO(202, 202, 202, 1.0), fontSize: 20),
-            ),
-            SizedBox(height: 5),
-            Text(
-              'Tech Con Hub',
-              style: TextStyle(
-                  color: Color.fromRGBO(202, 202, 202, 1.0), fontSize: 20),
-            ),
-            SizedBox(height: 40),
-            Container(
-                color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text('Me',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold)),
+                ],
+              ),
+              SizedBox(height: 10),
+              Text(
+                'Accelerating Tech with confidence',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              SizedBox(height: 5),
+              Text(
+                'East Africa’s Biggest ',
+                style: TextStyle(
+                    color: Color.fromRGBO(202, 202, 202, 1.0), fontSize: 20),
+              ),
+              SizedBox(height: 5),
+              Text(
+                'Tech Con Hub',
+                style: TextStyle(
+                    color: Color.fromRGBO(202, 202, 202, 1.0), fontSize: 20),
+              ),
+              SizedBox(height: 40),
+              Container(
+                // color: Colors.white,
                 width: double.infinity,
                 height: 250,
-                child: Row(children: [])),
-            SizedBox(height: 40),
-            Container(
-              width: double.infinity,
-              child: TextButton(
-                  style: TextButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 3, 7, 20),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5),
+                child: Stack(
+                  children: [
+                    Positioned(
+                      top: 0,
+                      right: 0,
+                      child: Image.asset(
+                        'assets/images/topimage.png',
+                        height: MediaQuery.of(context).size.width * 0.5,
+                        width: MediaQuery.of(context).size.width * 0.5,
                       ),
-                      padding: EdgeInsets.all(20)),
-                  onPressed: () {},
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.arrow_right_alt_sharp,
-                          color: Colors.white,
+                    ),
+                    Positioned(
+                      bottom: 0,
+                      left: 0,
+                      child: Image.asset(
+                        'assets/images/bottom.png',
+                        width: MediaQuery.of(context).size.width * 0.5,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 40),
+              Container(
+                width: double.infinity,
+                child: TextButton(
+                    style: TextButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 3, 7, 20),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5),
                         ),
-                      ),
-                      const Text(
-                        'Join Now',
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w200,
+                        padding: EdgeInsets.all(20)),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/login');
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.arrow_right_alt_sharp,
+                            color: Colors.white,
+                          ),
                         ),
-                      ),
-                    ],
-                  )),
-            )
-          ]),
+                        const Text(
+                          'Join Now',
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w200,
+                          ),
+                        ),
+                      ],
+                    )),
+              ),
+            ]),
+          ),
         ));
   }
 }
