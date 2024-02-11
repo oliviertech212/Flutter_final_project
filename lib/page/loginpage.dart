@@ -189,7 +189,9 @@ class _MyLoginPageState extends State<MyLoginPage> {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/register');
+                    },
                     child: Text(
                       "Sign Up",
                       style: TextStyle(fontWeight: FontWeight.bold),
