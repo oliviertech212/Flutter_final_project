@@ -1,5 +1,6 @@
 import 'package:finalproject/page/loginpage.dart';
 import 'package:finalproject/page/otpverificationpage.dart';
+import 'package:finalproject/page/recoverypage.dart';
 import 'package:finalproject/page/registerpage.dart';
 import 'package:flutter/material.dart';
 import 'app.dart';
@@ -16,5 +17,6 @@ void main() {
         "/login": (context) => const MyLoginPage(),
         '/register': (context) => const MyRegisterPage(),
         '/otp': (context) => const MyOtpPage(),
+        "/recover": (context) => const MyRecoverPage(),
       }));
 }
